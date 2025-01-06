@@ -25,7 +25,7 @@ const Header = () => {
       <div className="flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold">
-          <img src="/public/Logo.png" alt="Logo" />
+          <img src="/Logo.png" alt="Logo" />
         </Link>
         
 
@@ -86,11 +86,11 @@ const Header = () => {
     </div>
     <div className="bg-cover h-screen w-full bg-center opacity-4"
     style={{
-      backgroundImage:`url('src/assets/images/Main Image.png')` 
+      backgroundImage:`url('./assets/images/Main Image.png')` 
     }}
     >
     <div className="w-full h-screen flex justify-center items-center">
-      <a href=""><img src="src/assets/images/Play button.png" alt="" /></a>
+      <a href=""><img src="./assets/images/Play button.png" alt="" /></a>
     </div>
     
 
@@ -99,7 +99,7 @@ const Header = () => {
       <Location options={fromOptions}/>
 
       {/* To */}
-      <Location options={toOptions}/>
+      <Location options={toOptions}/>New chat
 
       {/* Dates */}
       <div className="flex items-center border rounded-full px-4 py-2 mx-2 w-full sm:w-auto mb-2 sm:mb-0">

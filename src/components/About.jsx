@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className='bg-zinc-50 items-center grid lg:grid-cols-2 md:grid-cols-2 pt-10'>
         <div className='flex-col pt-10 mx-4 my-4 px-4 py-4'>
-          <img src="src/assets/images/aboutImage.png" alt="" />
+          <img src="./assets/images/aboutImage.png" alt="" />
         </div>
         <div className='flex-col justify-center mx-4'>
           <h4 className='text-orange-400 uppercase text-xl font-bold my-3 mx-3'>About Us</h4>

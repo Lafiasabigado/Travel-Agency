@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="mx-auto">
-    <nav className="shadow-md">
+    <nav className="shadow-sm">
       <div className="flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold">
@@ -99,7 +99,7 @@ const Header = () => {
       <Location options={fromOptions}/>
 
       {/* To */}
-      <Location options={toOptions}/>New chat
+      <Location options={toOptions}/>
 
       {/* Dates */}
       <div className="flex items-center border rounded-full px-4 py-2 mx-2 w-full sm:w-auto mb-2 sm:mb-0">

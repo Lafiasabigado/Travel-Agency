@@ -86,11 +86,11 @@ const Header = () => {
     </div>
     <div className="bg-cover h-screen w-full bg-center opacity-4"
     style={{
-      backgroundImage:`url('./assets/images/Main Image.png')` 
+      backgroundImage:`url('/Main Image.png')` 
     }}
     >
     <div className="w-full h-screen flex justify-center items-center">
-      <a href=""><img src="./assets/images/Play button.png" alt="" /></a>
+      <a href=""><img src="/Play button.png" alt="" /></a>
     </div>
     
 

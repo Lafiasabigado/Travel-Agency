@@ -84,51 +84,53 @@ const Header = () => {
           </div>
         </div>
     </div>
+
     <div className="bg-cover h-screen w-full bg-center opacity-4"
-    style={{
-      backgroundImage:`url('/Main Image.png')` 
-    }}
+      style={{
+        backgroundImage:`url('/Main Image.png')` 
+      }}
     >
-    <div className="w-full h-screen flex justify-center items-center">
-      <a href=""><img src="/Play button.png" alt="" /></a>
+    
+      <div className="w-full h-screen flex justify-center items-center">
+        <a href=""><img src="/Play button.png" alt="" /></a>
+      </div>
     </div>
     
 
-    <div className="flex flex-wrap justify-center items-center bg-white p-4 shadow-md rounded-md max-w-7xl mx-auto ">
-      {/* From */}
-      <Location options={fromOptions}/>
+      <div className="flex flex-wrap justify-center items-center border bg-zinc-50  p-8 space-y-reverse shadow-2xl rounded-xl max-w-6xl mx-auto ">
+        {/* From */}
+        <Location options={fromOptions}/>
 
-      {/* To */}
-      <Location options={toOptions}/>
+        {/* To */}
+        <Location options={toOptions}/>
 
-      {/* Dates */}
-      <div className="flex items-center border rounded-full px-4 py-2 mx-2 w-full sm:w-auto mb-2 sm:mb-0">
-        <FaCalendarAlt className="text-orange-400 mr-2" />
-        <input
-          type="text"
-          placeholder="Select a date range"
-          className="outline-none bg-transparent text-gray-500 text-sm w-full sm:w-auto"
-        />
+        {/* Dates */}
+        <div className="flex items-center border rounded-full px-4 py-2 mx-2 w-full sm:w-auto mb-2 sm:mb-0">
+          <FaCalendarAlt className="text-orange-400 mr-2" />
+          <input
+            type="text"
+            placeholder="Select a date range"
+            className="outline-none bg-transparent text-gray-500 text-sm w-full sm:w-auto"
+          />
+        </div>
+
+        {/* Guests */}
+        <div className="flex items-center border rounded-full px-4 py-2 mx-2 w-full sm:w-auto mb-2 sm:mb-0">
+          <FaUsers className="text-orange-400 mr-2" />
+          <input
+            type="text"
+            placeholder="Number of your guest"
+            className="outline-none bg-transparent text-gray-500 text-sm w-full sm:w-auto"
+          />
+        </div>
+
+        {/* Search Button */}
+        <button className="bg-orange-400  hover:bg-orange-500 text-white sm:rounded-md rounded-full p-2 mx-2 w-full sm:w-auto"
+        >
+          <span className="block sm:hidden">Search</span>
+          <FaSearch className="hidden sm:block text-xl" />
+        </button>
       </div>
-
-      {/* Guests */}
-      <div className="flex items-center border rounded-full px-4 py-2 mx-2 w-full sm:w-auto mb-2 sm:mb-0">
-        <FaUsers className="text-orange-400 mr-2" />
-        <input
-          type="text"
-          placeholder="Number of your guest"
-          className="outline-none bg-transparent text-gray-500 text-sm w-full sm:w-auto"
-        />
-      </div>
-
-      {/* Search Button */}
-      <button className="bg-orange-400  hover:bg-orange-500 text-white sm:rounded-md rounded-full p-2 mx-2 w-full sm:w-auto"
-      >
-        <span className="block sm:hidden">Search</span>
-        <FaSearch className="hidden sm:block text-xl" />
-      </button>
-    </div>
-  </div>
   </header>
   );
 };

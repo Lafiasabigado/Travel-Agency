@@ -39,11 +39,11 @@ const Header = () => {
 
         {/* Menu Items */}
         <ul
-          className={`lg:flex lg:items-center lg:space-x-7 mx-auto absolute lg:static bg-white lg:bg-transparent top-16 left-0 w-full lg:w-auto transition-all duration-300 ease-in-out ${
+          className={`lg:flex  px-4 py-6  mx-auto sm:px-auto sm:py-0 lg:items-center lg:space-x-7  absolute lg:static bg-white lg:bg-transparent top-16 left-0 w-full lg:w-auto transition-all duration-300 ease-in-out ${
             isOpen ? "block" : "hidden"
           }`}
         >
-          <li className="flex items-center text-lg hover:text-orange-500 px-4 py-2 lg:px-0">
+          <li className="flex items-center  text-lg hover:text-orange-500 px-4 py-2 lg:px-0">
             <Link to="/">Home</Link>
           </li>
           <li className="flex items-center text-lg hover:text-orange-500 px-4 py-2 lg:px-0">

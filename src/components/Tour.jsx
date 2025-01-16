@@ -96,7 +96,7 @@ const Tour = () => {
     
       return (
         <>
-        <div className='mx-0 px-0 pt-4'>
+        <div className='mx-0 px-0 pt-6'>
             <h2 className='font-bold text-2xl text-center'>The <span className='text-orange-400'>best place</span> for vacation</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-4'>
                 {places.map((place,index) => (
@@ -104,7 +104,7 @@ const Tour = () => {
                 ))}
             </div>
         </div>
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 m-2 p-2 gap-4'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 m-2 py-2 px-2 gap-4'>
            {tours.map((tour) => (
             <div key={tour.id} className='flex-col rounded-md shadow-md'>
             <img src={tour.imageUrl} alt="" className='object-cover w-full' />
@@ -122,7 +122,7 @@ const Tour = () => {
                 </div>
               </div>
             </div>
-            <p className='font-bold text-xl m-1'>{tour.title}</p>
+            <p className='font-semibold text-xl m-1'>{tour.title}</p>
             <p className='text-gray-400 m-1'>{tour.duration} Tour on {tour.people} person</p>
             <div className='flex py-2 m-1'>
               <div className='flex-1 text-orange-400'>
@@ -130,7 +130,7 @@ const Tour = () => {
                   <span className='px-2  font-bold text-xl'>{tour.price} $</span>
                 </div>
               </div>
-              <div className='flex-2 text-gray-400'>
+              <div className='flex-2 text-gray-400 py-2'>
                 <div className='flex justify-end items-center'>
                   <span className='px-2'>View more</span>
                   <FaArrowRight />
@@ -140,6 +140,7 @@ const Tour = () => {
           </div>
           ))}
         </div>
+        <button className='mx-auto rounded-md border py-2 px-2 bg-white text-orange-400 hover:bg-orange-400 hover:text-white'>View All</button>
         </>
         
       )

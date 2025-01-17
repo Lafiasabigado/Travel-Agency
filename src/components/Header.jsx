@@ -97,7 +97,7 @@ const Header = () => {
     </div>
     
 
-      <div className="flex flex-wrap justify-center items-center border bg-zinc-50  p-8 space-y-reverse shadow-2xl rounded-xl max-w-6xl mx-auto ">
+      <div className="grid lg:grid-cols-5 gap-4 justify-center items-center border border-zinc-100 bg-zinc-50  p-8 space-y-reverse shadow-2xl rounded-xl max-w-6xl mx-auto ">
         {/* From */}
         <Location options={fromOptions}/>
 
@@ -125,10 +125,12 @@ const Header = () => {
         </div>
 
         {/* Search Button */}
-        <button className="bg-orange-400  hover:bg-orange-500 text-white sm:rounded-md rounded-full p-2 mx-2 w-full sm:w-auto"
+        <button className="bg-orange-400 hover:bg-orange-500 text-white sm:rounded-md rounded-full p-2 mx-2 sm:w-auto"
         >
           <span className="block sm:hidden">Search</span>
-          <FaSearch className="hidden sm:block text-xl" />
+          <div className="flex items-center justify-center">
+            <FaSearch className="hidden sm:block  text-xl" />
+          </div>
         </button>
       </div>
   </header>
@@ -154,6 +156,7 @@ export const Location = ({options, defaultValue}) => {
     ))
     }
     </select>
+    
   </div>
   )
 }

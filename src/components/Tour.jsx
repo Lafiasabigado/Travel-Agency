@@ -11,6 +11,7 @@ const Tour = () => {
         {label:"Best Price"},
     ]
     
+    const location = [4, 5, 7]
     const tours = [
       {
         id: 1,
@@ -98,18 +99,18 @@ const Tour = () => {
         <>
         <div className='mx-0 px-0 pt-6'>
             <h2 className='font-bold text-2xl text-center'>The <span className='text-orange-400'>best place</span> for vacation</h2>
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-4'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 p-4'>
                 {places.map((place,index) => (
-                   <div className='py-2 px-1 bg-white hover:bg-orange-300 shadow-md border-zinc-400 rounded-md text-center' key={index}>{place.label}</div>
+                   <div className='py-2 px-1 bg-white  shadow-sm border-zinc-400 rounded-md text-center' key={index}>{place.label}</div>
                 ))}
             </div>
         </div>
         <div className='grid lg:grid-cols-4 md:grid-cols-2 m-2 py-2 px-2 gap-4'>
            {tours.map((tour) => (
-            <div key={tour.id} className='flex-col rounded-md shadow-md'>
+          <div key={tour.id} className='flex-col rounded-md shadow-md'>
             <img src={tour.imageUrl} alt="" className='object-cover w-full' />
             <div className='flex py-2 m-1'>
-              <div className='flex-1 text-orange-400'>
+              <div className={`flex-1 ${location.includes(tour.id) ? 'text-blue-400':'text-orange-400'}`}>
                 <div className='flex justify-start items-center'>
                   <FaMapMarkerAlt className=''/>
                   <span className='px-2'>{tour.location}</span>
@@ -140,7 +141,9 @@ const Tour = () => {
           </div>
           ))}
         </div>
-        <button className='mx-auto rounded-md border py-2 px-2 bg-white text-orange-400 hover:bg-orange-400 hover:text-white'>View All</button>
+        <div className='flex justify-center items-center p-4'>
+          <button className='mx-auto rounded-md border py-3 px-6 bg-white text-orange-400 hover:bg-orange-400 hover:text-white'>View All</button>
+        </div>
         </>
         
       )

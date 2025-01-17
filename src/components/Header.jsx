@@ -63,7 +63,7 @@ const Header = () => {
           </li>
           {/* Phone Icon and Number */}
         <li
-          className="text-lg hidden sm:block text-orange-500 lg:flex  items-center justify-center space-x-2 lg:absolute lg:top-5 lg:right-4 lg:py-0 lg:px-4"
+          className="text-lg hidden text-orange-500 lg:flex  items-center justify-center space-x-2 lg:absolute lg:top-5 lg:right-4 lg:py-0 lg:px-4"
         >
           <FaPhoneAlt className="text-xl" />
           <span>+111 - 0258211</span>

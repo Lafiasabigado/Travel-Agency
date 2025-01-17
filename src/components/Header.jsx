@@ -50,7 +50,7 @@ const Header = () => {
             <Link to="/about">About Us</Link>
           </li>
           <li className="flex items-center text-lg hover:text-orange-500 px-4 py-2 lg:px-0">
-            <Link to="/todo">Tour Packages</Link>
+            <Link to="/tour">Tour Packages</Link>
           </li>
           <li className="flex items-center text-lg hover:text-orange-500 px-4 py-2 lg:px-0">
             <Link to="/contact">Our Services</Link>

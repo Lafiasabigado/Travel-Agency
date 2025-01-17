@@ -97,11 +97,11 @@ const Tour = () => {
     
       return (
         <>
-        <div className='mx-0 px-0 pt-6'>
-            <h2 className='font-bold text-2xl text-center'>The <span className='text-orange-400'>best place</span> for vacation</h2>
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 p-4'>
+        <div className='mx-0 px-0 pt-8'>
+            <h2 className='font-bold text-2xl pt-8 text-center'>The <span className='text-orange-400'>best place</span> for vacation</h2>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 p-4 gap-12'>
                 {places.map((place,index) => (
-                   <div className='py-2 px-1 bg-white  shadow-sm border-zinc-400 rounded-md text-center' key={index}>{place.label}</div>
+                   <div className='py-2 px-1 bg-white rounded-full hover:bg-orange-50 shadow-md text-center' key={index}>{place.label}</div>
                 ))}
             </div>
         </div>
@@ -145,7 +145,6 @@ const Tour = () => {
           <button className='mx-auto rounded-md border py-3 px-6 bg-white text-orange-400 hover:bg-orange-400 hover:text-white'>View All</button>
         </div>
         </>
-        
       )
 }
 

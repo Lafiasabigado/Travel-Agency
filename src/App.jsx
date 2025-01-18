@@ -5,6 +5,7 @@ import  About from './components/About'
 import  Home from './components/Home'
 import Tour from './components/Tour'
 import Services from './components/Services'
+import Gallery from './components/Gallery'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/about' element={<About />}></Route>
         <Route path='/tour' element={<Tour />}></Route>
         <Route path='/services' element={<Services />}></Route>
+        <Route path='/gallery' element={<Gallery />}></Route>
       </Routes>
     </Router>
   )

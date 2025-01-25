@@ -1,29 +1,32 @@
 import React from 'react'
 import { Galleria } from 'primereact/galleria';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Gallery = () => {
-  const images = [
-    {url:"/gallery1.png"},
-    {url:"/gallery2.png"},
-    {url:"/gallery3.png"},
-  ]
+  const [images, setImages] = useState(null);
+    
+  useEffect(() => {
+      PhotoService.getImages().then((data) => setImages(data));
+  }, []); 
 
   const itemTemplate = (item) => {
-    return <img src={item.url} alt="Image" style={{ width: '100%', display: 'block' }} />;
-  }   
+      return <img src={item.itemImageSrc} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
+  };
 
   return (
-    <div className='pt-10 flex justify-center items-center'>
-        <Galleria 
-        value={images} 
-        style={{ maxWidth: '640px' }} 
-        showThumbnails={false} 
-        showIndicators= {true}
-        showItemNavigators={true}
-        showThumbnailsNavigators={true}
-        item={itemTemplate} />
-    </div>
+      <div className="card">
+          <Galleria value={images} style={{ maxWidth: '640px' }} changeItemOnIndicatorHover showThumbnails={false} showIndicators item={itemTemplate} />
+      </div>
   )
 }
 
 export default Gallery
+
+
+const PhotoService = {
+  getImages: async () => {
+    const response = await axios.get('https://abdias.pythonanywhere.com/api/travels');
+    return response.data; 
+  }
+};

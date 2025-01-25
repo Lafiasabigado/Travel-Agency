@@ -1,7 +1,7 @@
 import React from 'react'
 import { Galleria } from 'primereact/galleria';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import PhotoService from './PhotoService';
 
 const Gallery = () => {
   const [images, setImages] = useState(null);
@@ -24,9 +24,5 @@ const Gallery = () => {
 export default Gallery
 
 
-const PhotoService = {
-  getImages: async () => {
-    const response = await axios.get('https://abdias.pythonanywhere.com/api/travels');
-    return response.data; 
-  }
-};
+
+

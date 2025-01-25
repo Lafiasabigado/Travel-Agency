@@ -8,11 +8,12 @@ import Gallery from './Gallery'
 const Home = () => {
   return (
   <div className=''>
-    <Header></Header>
+    <Header />
     <div>
-      <About></About>
-      <Tour></Tour>
-      <Services></Services>
+      <About />
+      <Tour />
+      <Services />
+      <Gallery />
     </div>
   </div>
   )

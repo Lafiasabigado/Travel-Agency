@@ -25,7 +25,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="card flex flex-col justify-center items-center pt-20">
+    <div className="card flex flex-col justify-center items-center pt-20 py-5">
       <div style={{ width: '100%', maxWidth: '800px' }}>
         <Galleria 
           value={images} 
@@ -40,9 +40,9 @@ const Gallery = () => {
           transitionInterval={3000}
           item={itemTemplate} 
         />
-        
+
         {/* Indicateurs personnalisés */}
-        <div className="flex justify-center mt-4 gap-2">
+        <div className="flex justify-center mt-4 gap-2 pt-2">
           {images.map((_, index) => (
             <button
               key={index}

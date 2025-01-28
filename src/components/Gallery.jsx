@@ -25,7 +25,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="card flex flex-col justify-center items-center pt-20 py-5">
+    <div className="card flex flex-col justify-center items-center pt-20 py-5 mx-5">
       <div style={{ width: '100%', maxWidth: '800px' }}>
         <Galleria 
           value={images} 

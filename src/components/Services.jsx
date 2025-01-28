@@ -27,7 +27,7 @@ const Services = () => {
         </div>
         {
           services.map((service) => (
-          <div key={service.id} className='shadow-md rounded-md m-1'>
+          <div key={service.id} className='border border-zinc-100 rounded-md m-1 lg:gap-0'>
           <div  className='flex-col flex m-2 items-start justify-center'>
             <div className={`px-4 py-4 rounded-md text-white ${icons.includes(service.id) ? 'bg-blue-400' : 'bg-red-400'}`}>
               {service.icon}

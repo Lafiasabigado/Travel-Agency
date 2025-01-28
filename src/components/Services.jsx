@@ -17,7 +17,7 @@ const Services = () => {
   const icons = [2,3]
   return (
     <>
-    <div className='pt-2 m-4 grid md:grid-cols-2 lg:grid-cols-4'>
+    <div className='pt-10 m-4 grid md:grid-cols-2 lg:grid-cols-4'>
         <div className='flex-col pt-2'>
         <h1 className='m-1 pt-2 text-3xl font-bold pt-2'>Why <span className='text-orange-400'>Choose</span> Us</h1>
         <p className='text-gray-400 m-1 pt-5'>We ensure that you’ll embark on a perfectly planned, safe vacation at a price you can afford.</p>
@@ -27,8 +27,8 @@ const Services = () => {
         </div>
         {
           services.map((service) => (
-          <div className='shadow-md rounded-md m-1'>
-          <div key={service.id} className='flex-col flex m-2 items-start justify-center'>
+          <div key={service.id} className='shadow-md rounded-md m-1'>
+          <div  className='flex-col flex m-2 items-start justify-center'>
             <div className={`px-4 py-4 rounded-md text-white ${icons.includes(service.id) ? 'bg-blue-400' : 'bg-red-400'}`}>
               {service.icon}
             </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaArrowRight, FaMapMarkerAlt, FaStar } from 'react-icons/fa'; // Import des icônes
-import { FaArrowLeft } from 'react-icons/fa6';
 
 
 const Tour = () => {
@@ -101,7 +100,7 @@ const Tour = () => {
             <h2 className='font-bold text-2xl pt-8 text-center'>The <span className='text-orange-400'>best place</span> for vacation</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 p-4 gap-12'>
                 {places.map((place,index) => (
-                   <div className='py-2 px-1 bg-white rounded-full hover:bg-orange-100 shadow-md text-center' key={index}>{place.label}</div>
+                   <div className='py-2 px-1 bg-white rounded-full hover:bg-orange-100 border border-zinc-100 text-center' key={index}>{place.label}</div>
                 ))}
             </div>
         </div>

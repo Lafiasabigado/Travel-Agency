@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaArrowRight, FaMapMarkerAlt, FaStar } from 'react-icons/fa'; // Import des icônes
 
 
 const Tour = () => {
+    
+    const [selectedPlace,setSelectedPlace] = useState("Special Deals") 
+
     const places = [
         {label:"Special Deals"},
         {label:"Populer"},
@@ -93,6 +96,7 @@ const Tour = () => {
         price: 310,
       },
     ] 
+    const filteredTours = tours.filter((tour) => tour.location === selectedPlace)
     
       return (
         <>
@@ -100,12 +104,16 @@ const Tour = () => {
             <h2 className='font-bold text-2xl pt-8 text-center'>The <span className='text-orange-400'>best place</span> for vacation</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 p-4 gap-12'>
                 {places.map((place,index) => (
-                   <div className='py-2 px-1 bg-white rounded-full hover:bg-orange-100 border border-zinc-100 text-center' key={index}>{place.label}</div>
+                   <div className={`py-2 px-1 bg-white rounded-full ${selectedPlace === place.label ? 'bg-orange-100': '' } border border-zinc-100 text-center cursor-poiinter `} 
+                   onClick={() => setSelectedPlace(place.label)} 
+                   key={index}>
+                    {place.label}
+                   </div>
                 ))}
             </div>
         </div>
         <div className='grid lg:grid-cols-4 md:grid-cols-2 m-2 py-2 px-2 gap-4'>
-           {tours.map((tour) => (
+           {filteredTours.map((tour) => (
           <div key={tour.id} className='flex-col rounded-md shadow-md transition-transform duration-50 hover:scale-90'>
             <img src={tour.imageUrl} alt="" className='object-cover w-full' />
             <div className='flex py-2 m-1'>

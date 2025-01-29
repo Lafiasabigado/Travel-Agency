@@ -39,7 +39,7 @@ const Tour = () => {
         id: 3,
         imageUrl: "/packimg3.png",
         location: "Spain",
-        rating: 4.7,
+        rating: 4.9,
         title: "Barcelona city beach",
         duration: "4 Days",
         people: 4,
@@ -49,7 +49,7 @@ const Tour = () => {
         id: 4,
         imageUrl: "/packimg4.png",
         location: "Maldives",
-        rating: 4.7,
+        rating: 4.1,
         title: "Hurawalhi Island",
         duration: "7 Days",
         people: 2,
@@ -59,10 +59,10 @@ const Tour = () => {
         id: 5,
         imageUrl: "/packimg5.png",
         location: "Canadana",
-        rating: 4.7,
+        rating: 3.9,
         title: "St. John's",
         duration: "7 Days",
-        people: 2,
+        people: 4,
         price: 620,
       },
       {
@@ -72,7 +72,7 @@ const Tour = () => {
         rating: 4.7,
         title: "Machu Picchu",
         duration: "5 Days",
-        people: 4,
+        people: 14,
         price: 820,
       },
       {
@@ -82,7 +82,7 @@ const Tour = () => {
         rating: 4.7,
         title: "Bora Bora Island",
         duration: "7 Days",
-        people: 2,
+        people: 15,
         price: 550,
       },
       {
@@ -92,13 +92,17 @@ const Tour = () => {
         rating: 4.5,
         title: "Sydney Opera House",
         duration: "7 Days",
-        people: 2,
+        people: 9,
         price: 310,
       },
     ] 
-    const filteredTours = selectedPlace ? tours.filter((tour) => tour.id === selectedPlace) : tours
+    const filteredTours = selectedPlace ? tours 
+       .sort((a,b) => (selectedPlace === 4 ? b.price - a.price : null))
+       .sort((a,b) => (selectedPlace === 2 ? b.rating - a.rating : null))
+       .sort((a,b) => (selectedPlace === 1 ? a.people - b.people :null))
+     : tours
     
-      return (
+    return (
         <>
         <div className='mx-0 px-0 pt-8'>
             <h2 className='font-bold text-2xl pt-8 text-center'>The <span className='text-orange-400'>best place</span> for vacation</h2>

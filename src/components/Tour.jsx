@@ -4,13 +4,13 @@ import { FaArrowRight, FaMapMarkerAlt, FaStar } from 'react-icons/fa'; // Import
 
 const Tour = () => {
     
-    const [selectedPlace,setSelectedPlace] = useState("Special Deals") 
+    const [selectedPlace,setSelectedPlace] = useState(null) 
 
     const places = [
-        {label:"Special Deals"},
-        {label:"Populer"},
-        {label:"Recommendation"},
-        {label:"Best Price"},
+        {id:1 , label:"Special Deals"},
+        {id:2 , label:"Populer"},
+        {id:3 , label:"Recommendation"},
+        {id:4 , label:"Best Price"},
     ]
     
     const location = [4, 5, 7]
@@ -96,7 +96,7 @@ const Tour = () => {
         price: 310,
       },
     ] 
-    const filteredTours = tours.filter((tour) => tour.location === selectedPlace)
+    const filteredTours = selectedPlace ? tours.filter((tour) => tour.id === selectedPlace) : tours
     
       return (
         <>
@@ -104,8 +104,8 @@ const Tour = () => {
             <h2 className='font-bold text-2xl pt-8 text-center'>The <span className='text-orange-400'>best place</span> for vacation</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 p-4 gap-12'>
                 {places.map((place,index) => (
-                   <div className={`py-2 px-1 bg-white rounded-full ${selectedPlace === place.label ? 'bg-orange-100': '' } border border-zinc-100 text-center cursor-poiinter `} 
-                   onClick={() => setSelectedPlace(place.label)} 
+                   <div className={`py-2 px-1 bg-white rounded-full ${selectedPlace === place.id ? 'hover:bg-orange-100': '' } border border-zinc-100 text-center cursor-poiinter `} 
+                   onClick={() => setSelectedPlace(place.id)} 
                    key={index}>
                     {place.label}
                    </div>
@@ -149,7 +149,7 @@ const Tour = () => {
           ))}
         </div>
         <div className='flex justify-center items-center p-4'>
-          <button className='mx-auto rounded-md border py-3 px-6 bg-white text-orange-400 hover:bg-orange-400 hover:text-white'>View All</button>
+          <button onClick={() => setSelectedPlace(null)} className='mx-auto rounded-md border py-3 px-6 bg-white text-orange-400 hover:bg-orange-400 hover:text-white'>View All</button>
         </div>
         </>
       )

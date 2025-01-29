@@ -4,6 +4,7 @@ import Header from './Header'
 import Tour  from './Tour'
 import Services from './Services'
 import Gallery from './Gallery'
+import Contact from './Contact'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Tour />
       <Services />
       <Gallery />
+      <Contact />
     </div>
   </div>
   )

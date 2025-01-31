@@ -5,15 +5,15 @@ const Contact = () => {
   const clients = [
     {
       id:1,
-      name:"John Doe",
+      name:"Benjamin Robert",
       image:"/client1.png",
       feedback:"Wow, what a fun vacation with Oelinken, guided by professional people"
     },
     {
       id:2,
-      name:"John Doe",
+      name:"Annette Black",
       image:"/client2.png",
-      feedback:"Wow, what a fun vacation with Oelinken, guided by professional people"
+      feedback:"It's an amazing experience to be able to vacation to a new place, thank you Oelinken"
     },
     {
       id:3,
@@ -39,7 +39,7 @@ const Contact = () => {
               had while on vacation with us
             </p>
         </div>
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-4'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-4 p-10'>
             {
               clients.map((client) => (
               <div key={client.id} className='shadow-md px-4 py-4'>

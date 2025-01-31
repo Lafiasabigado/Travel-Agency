@@ -52,10 +52,10 @@ const Contact = () => {
                     <p className='text-zinc-800'>{client.name}</p>
                     <div className='flex'>
                       <FaStar className='text-yellow-400'/>
-                      <FaStar className='text-gray-300'/>
+                      <FaStar className='text-yellow-300'/>
                       <FaStar className='text-yellow-400'/>
+                      <FaStar className='text-yellow-300'/>
                       <FaStar className='text-gray-300'/>
-                      <FaStar className='text-yellow-400'/>
                     </div>
                   </div>
                 </div>

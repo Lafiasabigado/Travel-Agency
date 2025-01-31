@@ -39,12 +39,12 @@ const Contact = () => {
               had while on vacation with us
             </p>
         </div>
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-4'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-4'>
             {
               clients.map((client) => (
               <div key={client.id} className='shadow-md px-4 py-4'>
-                <p className='text-gray-400 '>{client.feedback}</p>
-                <div className='flex items-center my-2 mx-7 md:mx-auto gap-4'>
+                <p className='text-gray-400'>{client.feedback}</p>
+                <div className='flex items-center my-2 mx-auto gap-4'>
                   <div className=''>
                     <img src={client.image} alt="" />
                   </div>

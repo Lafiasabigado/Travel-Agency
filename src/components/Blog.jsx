@@ -1,11 +1,39 @@
 import React from 'react'
+import PhotoService from './PhotoService';
+import { useEffect, useState } from 'react';
+import { div } from 'motion/react-client';
 
 const Blog = () => {
+
+    const [blogs, setBlogs] = useState([]);
+
+    const desc = [
+        {id:1,
+        date:"May 12, 2024",
+        title:"The Amazing Difference a Year of Travelling .",
+        description:"There isn’t a relationship around that can survive without trust. My relationship with my dog Peyton is deep..."
+        },
+        {id:2,
+        date:"May 12, 2024",
+        title:"The Amazing Difference a Year of Travelling .",
+        description:"There isn’t a relationship around that can survive without trust. My relationship with my dog Peyton is deep..."
+        },
+        {id:3,
+        date:"May 12, 2024",
+        title:"The Amazing Difference a Year of Travelling .",
+        description:"There isn’t a relationship around that can survive without trust. My relationship with my dog Peyton is deep..."
+        }
+    ]
+
+   useEffect(() => {
+     PhotoService.getImages().then((data) => setBlogs(data));
+   }, []);
   return (
+    <>
     <div className='m-2 pt-10'>
         <div className='grid lg:grid-cols-2 md:grid-cols-2'>
           <div className='flex-1 m-2'>
-            <h1 className='text-3xl font-bold'>Recent <span className='text-orange-400'>Blogs</span></h1>
+            <h1 className='text-3xl font-semibold'>Our <span className='text-orange-400'>Blog</span></h1>
           </div>
           <div className='flex-2 m-2'>
             <p className='text-gray-400'>Stay up to date with the latest tech trands and news in the pets.</p>
@@ -13,6 +41,25 @@ const Blog = () => {
           </div>
         </div>
     </div>
+    <div className='gap-4 grid lg:grid-cols-3 md:grid-cols-3'>
+    {
+    blogs.map((blog, index) => {
+    const d = desc[index]; 
+    return (
+    <div key={blog.id} className='m-2 border rounded-md'>
+      {d && ( 
+        <div className='m-2'>
+          <h1 className='text-gray-400 m-1'>{d.date}</h1>
+          <img className='rounded-md m-1' src={blog.itemImageSrc} alt={d.title} />
+          <h2 className='text-zinc-800 m-1'>{d.title}</h2>
+          <p className='text-gray-400 m-1'>{d.description}</p>
+        </div>
+      )}
+    </div>
+    );
+    })}
+    </div>
+    </>
   )
 }
 

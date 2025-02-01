@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaStar } from 'react-icons/fa'
+import { motion } from "motion/react"
 
 const Contact = () => {
   const clients = [
@@ -39,14 +40,21 @@ const Contact = () => {
               had while on vacation with us
             </p>
         </div>
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-4 p-10'>
+        <div  className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-4 p-10'>
             {
               clients.map((client) => (
               <div key={client.id} className='shadow-md px-4 py-4'>
                 <p className='text-gray-400'>{client.feedback}</p>
                 <div className='flex items-center my-2 mx-auto gap-4'>
-                  <div className=''>
-                    <img src={client.image} alt="" />
+                  <div  
+                    className=''>
+                    <motion.img 
+                    src={client.image} 
+                    alt=""
+                    whileHover={{ scale: 1.1 }}  // Zoom léger au survol
+                    whileTap={{ scale: 0.9 }} 
+                    transition={{ duration: 0.2 }}
+                    />
                   </div>
                   <div className='gap-4 my-4'>
                     <p className='text-zinc-800'>{client.name}</p>

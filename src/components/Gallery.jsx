@@ -9,7 +9,7 @@ const Gallery = () => {
     
   useEffect(() => {
       PhotoService.getImages().then((data) => setImages(data));
-  }, []); 
+  }, []);   
 
   const itemTemplate = (item) => {
       return (

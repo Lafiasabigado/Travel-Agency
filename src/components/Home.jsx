@@ -5,6 +5,7 @@ import Tour  from './Tour'
 import Services from './Services'
 import Gallery from './Gallery'
 import Contact from './Contact'
+import Blog from './Blog'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Services />
       <Gallery />
       <Contact />
+      <Blog />
     </div>
   </div>
   )

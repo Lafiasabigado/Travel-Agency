@@ -40,14 +40,14 @@ const Contact = () => {
               had while on vacation with us
             </p>
         </div>
-        <div  className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-4 p-10'>
+        <div  className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 p-10'>
             {
               clients.map((client) => (
               <div key={client.id} className='shadow-md px-4 py-4'>
                 <p className='text-gray-400'>{client.feedback}</p>
                 <div className='flex items-center my-2 mx-auto gap-4'>
                   <div  
-                    className=''>
+                    className='w-16 h-16 md:w-20 md:h-20 flex-shrink-0'>
                     <motion.img 
                     src={client.image} 
                     alt=""

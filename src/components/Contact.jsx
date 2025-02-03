@@ -50,6 +50,7 @@ const Contact = () => {
                     className='w-16 h-16 md:w-20 md:h-20 flex-shrink-0'>
                     <motion.img 
                     src={client.image} 
+                    className='w-full h-full object-cover rounded-full'
                     alt=""
                     whileHover={{ scale: 1.1 }}  // Zoom léger au survol
                     whileTap={{ scale: 0.9 }} 

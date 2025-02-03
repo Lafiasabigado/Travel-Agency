@@ -27,8 +27,8 @@ const Footer = () => {
   ]
   return (
     <>
-    <div className='pt-20 bg-orange-100 h-full w-full'>
-    <div className=' pt-10  grid md:grid-cols-5 lg:grid-cols-5'>
+    <div className='pt-10 bg-orange-100 w-full px-4 sm:px-6'>
+    <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5'>
       <div className='flex-col mx-2'>
         <div className='my-2 '>
           <img src="/Logo.png" alt="" />
@@ -58,7 +58,7 @@ const Footer = () => {
         <button className='bg-orange-400 text-white px-4 py-2 my-2 rounded-md'>Get Access</button>
       </div>
     </div>
-    <div className='pt-10'>
+    <div className='pt-5'>
       <hr className='bg-gray-400 flex justify-center'/>
     </div>
     <div className='grid-cols-2 grid lg:grid-cols-2 md:grid-cols-2 pt-5'>

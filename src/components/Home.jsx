@@ -7,6 +7,7 @@ import Gallery from './Gallery'
 import Contact from './Contact'
 import Blog from './Blog'
 import Partner from './Partner'
+import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Contact />
       <Blog />
       <Partner />
+      <Footer />
     </div>
   </div>
   )

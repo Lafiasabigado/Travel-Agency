@@ -12,11 +12,11 @@ const Partner = () => {
     {id:8, image:"/OYO Logo.png"},
   ]
   return (
-    <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4 pt-10'>
+    <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4 pt-20'>
       {
         partners.map((partner) => (
             <div key={partner.id} className='m-4 flex justify-center'>
-             <img src={partner.image} alt="" />
+             <img src={partner.image} alt="" className='object-cover'/>
             </div>
         ))
       }

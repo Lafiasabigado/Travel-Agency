@@ -6,6 +6,7 @@ import Services from './Services'
 import Gallery from './Gallery'
 import Contact from './Contact'
 import Blog from './Blog'
+import Partner from './Partner'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Gallery />
       <Contact />
       <Blog />
+      <Partner />
     </div>
   </div>
   )

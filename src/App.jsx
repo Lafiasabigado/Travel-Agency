@@ -8,6 +8,7 @@ import Services from './components/Services'
 import Gallery from './components/Gallery'
 import Contact from './components/Contact'
 import Blog from './components/Blog'
+import Partner from './components/Partner'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/gallery' element={<Gallery />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/blog' element={<Blog />}></Route>
+        <Route path='/partner' element={<Partner />}></Route>
       </Routes>
     </Router>
   )

@@ -15,13 +15,13 @@ const Blog = () => {
         },
         {id:2,
         date:"May 12, 2024",
-        title:"The Amazing Difference a Year of Travelling .",
-        description:"There isn’t a relationship around that can survive without trust. My relationship with my dog Peyton is deep..."
+        title:"Reflections on 5 Months of Travel: Time to Hang",
+        description:"Doting pet parents have a relentless need to constantly photograph every adorable pet moment..."
         },
         {id:3,
         date:"May 12, 2024",
-        title:"The Amazing Difference a Year of Travelling .",
-        description:"There isn’t a relationship around that can survive without trust. My relationship with my dog Peyton is deep..."
+        title:"How to Save Money While Visiting Africa .",
+        description:"It is easy to forget that animals are living creatures with a beating heart."
         }
     ]
 

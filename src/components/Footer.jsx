@@ -65,7 +65,7 @@ const Footer = () => {
        <div>
          <p className='text-gray-400 my-2'>TravelAgent © 2022 All Right Reserved</p>
        </div>
-       <div className='flex justify-center flex-wrap'>
+       <div className='flex justify-center gap-2'>
         <p className='text-gray-400 my-2 mx-1'>Terms of Service</p>
         <p className='text-gray-400 my-2 mx-1'>Privacy Policy</p>
        </div>

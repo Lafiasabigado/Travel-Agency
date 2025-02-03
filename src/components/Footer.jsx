@@ -28,8 +28,8 @@ const Footer = () => {
   return (
     <>
     <div className='pt-10 bg-orange-100 w-full px-4 sm:px-6'>
-    <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5'>
-      <div className='flex-col mx-2'>
+    <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4'>
+      <div className='flex-col mx-2 '>
         <div className='my-2 '>
           <img src="/Logo.png" alt="" />
         </div>
@@ -52,7 +52,7 @@ const Footer = () => {
           <p className='text-gray-400 my-1 mx-1'>{element.label4}</p> 
         </div>
       ))}
-      <div className='flex-col mx-2'>
+      <div className='flex-col mx-2 gap-2'>
         <h2 className='mx-1 font-semibold'>Get in touch</h2>
         <input type="text" className='rounded-md px-2 py-2 my-2' placeholder='Your email here...' />
         <button className='bg-orange-400 text-white px-4 py-2 my-2 rounded-md'>Get Access</button>

@@ -28,8 +28,8 @@ const Footer = () => {
   return (
     <>
     <div className='pt-10 bg-orange-100 w-full px-4 sm:px-6'>
-    <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4'>
-      <div className='flex-col mx-2 '>
+    <div className='grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4'>
+      <div className='flex-col mx-2 my-2'>
         <div className='my-2 '>
           <img src="/Logo.png" alt="" />
         </div>
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
       </div>
       {elements.map((element) => (
-        <div key={element.id} className='flex-col mx-2'>
+        <div key={element.id} className='flex-col mx-2 my-4'>
           <h2 className='mx-1 font-semibold'>{element.title}</h2>
           <p className='text-gray-400 my-1 mx-1'>{element.label1}</p>
           <p className='text-gray-400 my-1 mx-1'>{element.label2}</p> 
@@ -61,14 +61,8 @@ const Footer = () => {
     <div className='pt-5'>
       <hr className='bg-gray-400 flex justify-center'/>
     </div>
-    <div className='grid-cols-2 grid lg:grid-cols-2 md:grid-cols-2 pt-5'>
-       <div>
-         <p className='text-gray-400 my-2'>TravelAgent © 2022 All Right Reserved</p>
-       </div>
-       <div className='flex justify-center gap-2'>
-        <p className='text-gray-400 my-2 mx-1'>Terms of Service</p>
-        <p className='text-gray-400 my-2 mx-1'>Privacy Policy</p>
-       </div>
+    <div className='flex justify-center items-center'>
+        <p className='text-gray-400 my-2'>TravelAgent © 2025 All Right Reserved</p>
     </div>
     </div>
     </>

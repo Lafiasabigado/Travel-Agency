@@ -20,8 +20,8 @@ const Header = () => {
   ]
 
   return (
-    <header className="mx-auto">
-    <nav className=" bg-orange-50 static">
+    <header className="mx-auto max-w-7xl">
+    <nav className="bg-orange-50 sm:bg-white static">
       <div className="flex items-center  justify-between px-4 py-3">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold">

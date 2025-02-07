@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='bg-zinc-50 items-center grid lg:grid-cols-2 md:grid-cols-2 '>
+    <div className='bg-zinc-50 items-center grid lg:grid-cols-2 md:grid-cols-2'>
         <div className='flex-col pt-10 mx-4 my-4 px-4 py-4 transition-transform duration-50 hover:scale-90'>
           <img src="/aboutImage.png" alt="" />
         </div>

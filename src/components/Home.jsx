@@ -12,8 +12,8 @@ import Footer from './Footer'
 const Home = () => {
   return (
   <div className=''>
-    <Header />
-    <div>
+    <div className='max-w-6xl mx-auto'>
+      <Header />
       <About />
       <Tour />
       <Services />
@@ -21,8 +21,8 @@ const Home = () => {
       <Contact />
       <Blog />
       <Partner />
-      <Footer />
     </div>
+    <Footer />
   </div>
   )
 }

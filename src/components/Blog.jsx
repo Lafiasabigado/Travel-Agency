@@ -2,6 +2,7 @@ import React from 'react'
 import PhotoService from './PhotoService';
 import { useEffect, useState } from 'react';
 import { div } from 'motion/react-client';
+import { motion } from "motion/react"
 
 const Blog = () => {
 
@@ -50,7 +51,13 @@ const Blog = () => {
       {d && ( 
         <div className='m-2'>
           <h1 className='text-gray-400 m-1'>{d.date}</h1>
-          <img className='rounded-md m-1' src={blog.itemImageSrc} alt={d.title} />
+          <motion.img 
+          className='rounded-md m-1' 
+          src={blog.itemImageSrc} alt={d.title}
+          whileHover={{ scale: 0.9 }}  // Zoom léger au survol
+          whileTap={{ scale: 0.9 }} 
+          transition={{ duration: 0.2 }} 
+          />
           <h2 className='text-zinc-800 m-1'>{d.title}</h2>
           <p className='text-gray-400 m-1'>{d.description}</p>
         </div>

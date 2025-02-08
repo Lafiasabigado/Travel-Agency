@@ -14,7 +14,7 @@ const Contact = () => {
       id:2,
       name:"Annette Black",
       image:"/client2.png",
-      feedback:"It's an amazing experience to be able to vacation to a new place, thank you Oelinken"
+      feedback:"Wow, what a fun vacation with Oelinken, guided by professional people"
     },
     {
       id:3,
@@ -32,10 +32,10 @@ const Contact = () => {
   return (
     <div className='m-2 pt-10'>
         <div className='m-4 text-left sm:text-center'>
-            <h2 className='mx-4 my-2 font-semibold text-2xl mx-2 my-2'>
+            <h2 className='mx-4 font-semibold text-2xl my-2'>
               Contact us to review <span className='text-orange-400'>your experience </span> with us
             </h2>
-            <p className='mx-4 my-4 text-gray-400 mx-2 my-2'>
+            <p className='mx-4 my-4 text-gray-400'>
               Give us feedback and let us know what experiences you
               had while on vacation with us
             </p>
@@ -43,7 +43,9 @@ const Contact = () => {
         <div  className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 p-10'>
             {
               clients.map((client) => (
-              <div key={client.id} className='shadow-md px-4 py-4'>
+              <div key={client.id} 
+              className='shadow-md px-4 py-4 transition-transform duration-50 hover:scale-90'
+              >
                 <p className='text-gray-400'>{client.feedback}</p>
                 <div className='flex items-center my-2 mx-auto gap-4'>
                   <div  

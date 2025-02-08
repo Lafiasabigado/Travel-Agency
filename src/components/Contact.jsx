@@ -40,7 +40,7 @@ const Contact = () => {
               had while on vacation with us
             </p>
         </div>
-        <div  className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 p-10'>
+        <div  className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 p-10'>
             {
               clients.map((client) => (
               <div key={client.id} 

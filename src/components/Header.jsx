@@ -20,7 +20,7 @@ const Header = () => {
   ]
 
   return (
-    <header className="mx-auto max-w-7xl">
+    <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav className="bg-orange-50 sm:bg-white static">
       <div className="flex items-center  justify-between px-4 py-3">
         {/* Logo */}
@@ -63,10 +63,9 @@ const Header = () => {
           </li>
           {/* Phone Icon and Number */}
         <li
-          className="text-lg hidden text-orange-500 lg:flex  items-center justify-center space-x-2 lg:absolute lg:top-5 lg:right-4 lg:py-0 lg:px-4"
+          className="text-lg hidden text-orange-500 lg:flex  items-center justify-center space-x-2 lg:absolute lg:top-5 lg:right-4 lg:py-0 lg:px-10"
         >
-          <FaPhoneAlt className="text-xl" />
-          <span>+111</span>
+          <FaPhoneAlt className="text-xl" /><span>+111-0258211</span>
         </li>
         </ul>
       </div>

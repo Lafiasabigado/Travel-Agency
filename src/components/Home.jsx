@@ -12,7 +12,7 @@ import Footer from './Footer'
 const Home = () => {
   return (
   <div className=''>
-    <div className='max-w-6xl mx-auto'>
+    <div className='max-w-7xl mx-auto'>
       <Header />
       <About />
       <Tour />

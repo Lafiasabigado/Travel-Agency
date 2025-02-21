@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <nav className="bg-orange-50 sm:bg-white static">
+    <nav className="bg-white static">
       <div className="flex items-center  justify-between px-4 py-3">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold">
@@ -39,7 +39,7 @@ const Header = () => {
 
         {/* Menu Items */}
         <ul
-          className={`lg:flex  px-4 py-6  mx-auto sm:px-auto sm:py-0 lg:items-center lg:space-x-7  absolute lg:static bg-orange-50 lg:bg-transparent top-16 left-0 w-full lg:w-auto transition-all duration-300 ease-in-out ${
+          className={`lg:flex  px-4 py-6  mx-auto sm:px-auto sm:py-0 lg:items-center lg:space-x-7  absolute lg:static bg-white lg:bg-transparent top-16 left-0 w-full lg:w-auto transition-all duration-300 ease-in-out ${
             isOpen ? "block" : "hidden"
           }`}
         >
